@@ -1,10 +1,10 @@
-# Get all books - READ
+# GET - Get all books - READ
 GET http://localhost:3001/books HTTP/1.1
 Content-Type: application/json
 
 ###
 
-# Create a Book
+# POST - Create a Book
 POST http://localhost:3001/books HTTP/1.1
 Content-Type: application/json
 
@@ -14,7 +14,7 @@ Content-Type: application/json
 
 ###
 
-# Update a book
+# PUT - Update a book
 PUT http://localhost:3001/books/1 HTTP/1.1
 Content-Type: application/json
 
@@ -24,6 +24,6 @@ Content-Type: application/json
 
 ###
 
-# Delete a book
+# DELETE - Delete a book
 DELETE http://localhost:3001/books/1 HTTP/1.1
 Content-Type: application/json
