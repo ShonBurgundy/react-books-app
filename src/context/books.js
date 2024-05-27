@@ -21,11 +21,6 @@ function Provider({ children }) {
 
     const updatedBooks = books.map((book) => {
       return book.id === id ? { ...book, ...response.data } : book;
-      // if (book.id === id) {
-      //   return { ...book, ...response.data };
-      // }
-
-      // return book;
     });
 
     setBooks(updatedBooks);
@@ -62,7 +57,7 @@ function Provider({ children }) {
 
   return (
     <BooksContext.Provider
-      value={{ valueToShare }}
+      value={ valueToShare }
     >
       {children}
     </BooksContext.Provider>
