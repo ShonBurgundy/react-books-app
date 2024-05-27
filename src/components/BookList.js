@@ -3,8 +3,6 @@ import BooksContext from "../context/books";
 import BookShow from "./BookShow";
 
 function BookList({ books, onDelete, onEdit }) {
-  const value = useContext(BooksContext);
-
   const renderedBooks = books.map((book) => {
     return (
       <BookShow
@@ -16,8 +14,11 @@ function BookList({ books, onDelete, onEdit }) {
     )
   });
 
-  return <div className="book-list">{renderedBooks}
-  {value}</div>;
+  return (
+    <div className="book-list">
+      {renderedBooks}
+    </div>
+  );
 }
 
 export default BookList;
